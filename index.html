@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">PixelCraft Studio - Pro Web Design Agency</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar with Language Selector -->
+    <div class="top-bar">
+        <div class="top-container">
+            <div class="brand-logo">
+                <i class="fa-solid fa-code"></i> <span data-i18n="logoText">PixelCraft Studio</span>
+            </div>
+            <div class="lang-selector">
+                <i class="fa-solid fa-globe"></i>
+                <select id="languageSelect" onchange="changeLanguage()">
+                    <option value="en" selected>English</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="hi">हिन्दी</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">Transform Your Local Business with a High-Converting Website</h1>
+            <p data-i18n="heroSubtitle">Select your budget tier, explore advanced features, and scale your business. (Note: 50% advance payment required for booking).</p>
+            <a href="#packages" class="cta-btn" data-i18n="heroBtn">Explore Budget Tiers & Features</a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container" id="packages">
+
+        <!-- Trust Banner -->
+        <div class="trust-banner">
+            <div class="trust-item">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                    <h4 data-i18n="trust1Title">Fast Delivery</h4>
+                    <p data-i18n="trust1Sub">3 to 5 Business Days</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h4 data-i18n="trust2Title">Free Support</h4>
+                    <p data-i18n="trust2Sub">1 Month Maintenance</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-handshake"></i>
+                <div>
+                    <h4 data-i18n="trust3Title">Secure Booking</h4>
+                    <p data-i18n="trust3Sub">50% Advance Policy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 50px;">
+            <h2 data-i18n="pkgHeading">Select Your Budget Tier & Unlock Features</h2>
+            <p data-i18n="pkgSubHeading">Click any budget card below to view detailed features, 1 UI preview image, and advance payment terms.</p>
+        </div>
+
+        <!-- Budget Cards Grid (4 Options) -->
+        <div class="categories-grid">
+            
+            <!-- Tier 1: 1k - 3k -->
+            <div class="card" onclick="openDetails('1k-3k')">
+                <div class="card-img" style="background-image: url('https://i.ibb.co/jkb1hgqm/1k.png');">
+                    <span class="price-tag"><span class="curr-sym">Rs.</span> 1,000 - 3,000</span>
+                </div>
+                <div class="card-body">
+                    <span class="tier-badge" data-i18n="tier1Badge">Starter Tier</span>
+                    <h3 data-i18n="tier1Title">Essential Landing Page</h3>
+                    <p data-i18n="tier1Desc">Perfect for micro-shops, salons, and quick local promotions with WhatsApp integration.</p>
+                    <div class="card-footer-info">
+                        <span><i class="fa-solid fa-circle-check"></i> <span data-i18n="clickToView">Click to view features & image</span></span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 2: 4k - 7k -->
+            <div class="card" onclick="openDetails('4k-7k')">
+                <div class="card-img" style="background-image: url('https://i.ibb.co/ksMdDLyT/4k.png');">
+                    <span class="price-tag"><span class="curr-sym">Rs.</span> 4,000 - 7,000</span>
+                </div>
+                <div class="card-body">
+                    <span class="tier-badge popular" data-i18n="tier2Badge">Growth Tier</span>
+                    <h3 data-i18n="tier2Title">Advanced Business Multi-Page</h3>
+                    <p data-i18n="tier2Desc">Ideal for boutiques and garment stores with product showcase catalogs and QR code support.</p>
+                    <div class="card-footer-info">
+                        <span><i class="fa-solid fa-circle-check"></i> <span data-i18n="clickToView">Click to view features & image</span></span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 3: 8k - 10k+ -->
+            <div class="card" onclick="openDetails('8k-10k')">
+                <div class="card-img" style="background-image: url('https://i.ibb.co/VFdt0pj/8k.png');">
+                    <span class="price-tag"><span class="curr-sym">Rs.</span> 8,000 - 10,000+</span>
+                </div>
+                <div class="card-body">
+                    <span class="tier-badge premium" data-i18n="tier3Badge">Enterprise Premium</span>
+                    <h3 data-i18n="tier3Title">Dynamic Restaurant & Cafe Suite</h3>
+                    <p data-i18n="tier3Desc">High-end solution featuring online table booking, Scan-to-Get digital menu card, and custom dashboard.</p>
+                    <div class="card-footer-info">
+                        <span><i class="fa-solid fa-circle-check"></i> <span data-i18n="clickToView">Click to view features & image</span></span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tier 4: Custom Tailor-Made -->
+            <div class="card" onclick="openDetails('custom')">
+                <div class="card-img" style="background-image: url('https://i.ibb.co/Z1b3c3tH/custom.png');">
+                    <span class="price-tag" data-i18n="customPrice">Custom Budget</span>
+                </div>
+                <div class="card-body">
+                    <span class="tier-badge custom" data-i18n="tier4Badge">Tailor-Made Solution</span>
+                    <h3 data-i18n="tier4Title">Custom Requirement Website</h3>
+                    <p data-i18n="tier4Desc">As client says, we will build exactly what you envision with complete custom features and logic.</p>
+                    <div class="card-footer-info">
+                        <span><i class="fa-solid fa-circle-check"></i> <span data-i18n="clickToView">Click to view features & image</span></span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Detailed Modal Popup -->
+        <div class="modal-overlay" id="detailModal">
+            <div class="modal-content">
+                <button class="close-modal" onclick="closeDetails()">&times;</button>
+                <div id="modalBody">
+                    <!-- Dynamic Content Injected via JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Cost Estimator -->
+        <div class="estimator-section">
+            <div class="section-title" style="margin-bottom: 25px;">
+                <h2 data-i18n="estHeading">Instant Price Estimator</h2>
+                <p data-i18n="estSub">Calculate your approximate website cost based on your requirements</p>
+            </div>
+            <div class="estimator-box">
+                <div class="est-group">
+                    <label data-i18n="estPages">Number of Pages:</label>
+                    <select id="estPages" onchange="calculateEstimate()">
+                        <option value="1000">1 Page (Landing Page) - <span class="curr-sym">Rs.</span>1,000</option>
+                        <option value="3000">2-3 Pages (Multi-Page) - <span class="curr-sym">Rs.</span>3,000</option>
+                        <option value="6000">4-6 Pages (Business Suite) - <span class="curr-sym">Rs.</span>6,000</option>
+                    </select>
+                </div>
+                <div class="est-group">
+                    <label data-i18n="estAddon">Special Feature / Add-on:</label>
+                    <select id="estAddon" onchange="calculateEstimate()">
+                        <option value="0">Standard WhatsApp Link - Free</option>
+                        <option value="2000">QR Code Menu Integration (+<span class="curr-sym">Rs.</span>2,000)</option>
+                        <option value="4000">Online Booking / Table Reservation (+<span class="curr-sym">Rs.</span>4,000)</option>
+                    </select>
+                </div>
+                <div class="est-result">
+                    <span data-i18n="estTotalLabel">Estimated Budget:</span>
+                    <h3 id="estTotalPrice"><span class="curr-sym">Rs.</span> 1,000</h3>
+                </div>
+            </div>
+        </div>
+
+       <!-- Previous Work / Portfolio -->
+        <div class="section-title" style="margin-top: 90px;">
+            <h2 data-i18n="portfolioHeading">Our Recent Client Masterpieces</h2>
+            <p data-i18n="portfolioSubHeading">Explore 4 live web design projects delivered to our happy business owners</p>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- Masterpieces 1 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrap" style="background-image: url('https://i.ibb.co/WWfCLxZB/fdp-ss.png');"></div>
+                <div class="portfolio-info">
+                    <h3>forward-democratic-party</h3>
+                    <p data-i18n="port1Desc">Guided by the patriotic ideology of Netaji Subhas Chandra Bose. Dedicated to youth empowerment, transparent governance, and economic equality for every Indian citizen.</p>
+                    <div class="portfolio-links-wrap">
+                        <a href="https://forward-democratic-party---fdp.web.app/" target="_blank" class="portfolio-link"><span data-i18n="livePreview">Live Preview</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://forward-democratic-party---fdp.web.app/" target="_blank" class="demo-btn" data-i18n="demoBtn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Masterpieces 2 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrap" style="background-image: url('https://i.ibb.co/VcLj0qbc/Venus-Cafe-Restaurant.png');"></div>
+                <div class="portfolio-info">
+                    <h3>Venus Cafe & Restaurant</h3>
+                    <p data-i18n="port2Desc">Welcome to Venus Cafe & Restaurant, where exceptional flavors, cozy ambiance, and warm hospitality come together.</p>
+                    <div class="portfolio-links-wrap">
+                        <a href="https://kuntalkar45.github.io/Venus-Cafe-Restaurant/" target="_blank" class="portfolio-link"><span data-i18n="livePreview">Live Preview</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://kuntalkar45.github.io/Venus-Cafe-Restaurant/" target="_blank" class="demo-btn" data-i18n="demoBtn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Masterpieces 3 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrap" style="background-image: url('https://i.ibb.co/p6GGrQMF/royal.png');"></div>
+                <div class="portfolio-info">
+                    <h3>Royal Hair Salon</h3>
+                    <p data-i18n="port2Desc">Experience luxurious hair care, trendsetting cuts, and vibrant coloring tailored just for you.</p>
+                    <div class="portfolio-links-wrap">
+                        <a href="https://kuntalkar45.github.io/Royal-Hair-Salon/" target="_blank" class="portfolio-link"><span data-i18n="livePreview">Live Preview</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://kuntalkar45.github.io/Royal-Hair-Salon/" target="_blank" class="demo-btn" data-i18n="demoBtn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Masterpieces 4 -->
+            <div class="portfolio-card">
+                <div class="portfolio-img-wrap" style="background-image: url('https://i.ibb.co/TdRttrN/ff.png');"></div>
+                <div class="portfolio-info">
+                    <h3>Fashion Factory</h3>
+                    <p data-i18n="port2Desc">From anime & movie fandoms to oversized streetwear & everyday chic. Upgrade your wardrobe with exclusive designs crafted for rebels & trendsetters.</p>
+                    <div class="portfolio-links-wrap">
+                        <a href="https://kuntalkar45.github.io/Fashion-Factory/" target="_blank" class="portfolio-link"><span data-i18n="livePreview">Live Preview</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://kuntalkar45.github.io/Fashion-Factory/" target="_blank" class="demo-btn" data-i18n="demoBtn">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="section-title" style="margin-top: 90px;">
+            <h2 data-i18n="testHeading">What Our Clients Say</h2>
+            <p data-i18n="testSub">Real feedback from local business owners who scaled with us</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p data-i18n="test1Text">"PixelCraft Studio built our cafe digital menu in just 3 days! Our customer engagement has doubled since then."</p>
+                <h4>— Rashed Ahmed, <span data-i18n="test1Shop">Café Owner</span></h4>
+            </div>
+            <div class="testi-card">
+                <div class="testi-stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p data-i18n="test2Text">"Very professional service. The landing page for my salon looks premium and brings direct WhatsApp bookings daily."</p>
+                <h4>— Tanvir Hasan, <span data-i18n="test2Shop">Salon Manager</span></h4>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section-title" style="margin-top: 90px;">
+            <h2 data-i18n="faqHeading">Frequently Asked Questions</h2>
+            <p data-i18n="faqSub">Got questions? We have got answers</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <h4 data-i18n="faq1Q">Do I need to pay 50% advance before starting?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq1A">Yes, to confirm your booking and initiate development, a 50% advance payment is required. The remaining 50% is paid after successful delivery.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <h4 data-i18n="faq2Q">How long does it take to build a website?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq2A">Basic landing pages take 1-2 days, while multi-page business websites and restaurant suites take 3 to 5 business days.</p>
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <h4 data-i18n="faq3Q">Will my website work smoothly on mobile phones?</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p data-i18n="faq3A">Absolutely! All our websites are 100% responsive and optimized for smartphones, tablets, and desktop computers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section (Er. Kuntal Kar) -->
+        <div class="about-me-section">
+            <div class="about-content">
+                <span class="about-tag" data-i18n="aboutTag">Meet The Creator</span>
+                <h2 data-i18n="aboutName">Er. Kuntal Kar</h2>
+                <h4 data-i18n="aboutDegree">B.Tech in Computer Science & Engineering (CSE)</h4>
+                <p data-i18n="aboutBio">Hi! I am Kuntal Kar, a passionate CSE engineer and web developer. I bridge the gap between complex coding and simple local business solutions, crafting high-performance and modern websites.</p>
+                <div class="skill-badges">
+                    <span>Full-Stack UI</span>
+                    <span>WordPress & No-Code</span>
+                    <span>Responsive Web Design</span>
+                    <span>Local Business Tech</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section" id="contact">
+            <h2 data-i18n="contactHeading">Let's Build Something Exceptional Together</h2>
+            <p data-i18n="contactSubHeading">Connect with us directly through email or join our exclusive WhatsApp channel for updates. (50% advance required).</p>
+            
+            <div class="contact-buttons">
+                <a href="mailto:pixelcraft@studio.com" class="contact-card email-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4 data-i18n="emailTitle">Drop an Email</h4>
+                        <p>owkuntal@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://whatsapp.com/channel/0029Vb6BlfAFy72EcAw2kn3m" target="_blank" class="contact-card whatsapp-card">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h4 data-i18n="waTitle">WhatsApp Channel</h4>
+                        <p data-i18n="waSub">Join our active community</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Floating Telegram Button -->
+    <a href="https://t.me/imkuntalkar" target="_blank" class="telegram-float-btn" title="Chat on Telegram">
+        <i class="fa-brands fa-telegram"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029Vb6BlfAFy72EcAw2kn3m" target="_blank" class="whatsapp-float-btn" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- AI Chatbot Floating Widget -->
+    <div class="chatbot-icon" onclick="toggleChat()">
+        <i class="fa-solid fa-comments"></i>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <h4><i class="fa-solid fa-robot"></i> <span data-i18n="botName">AI Assistant</span></h4>
+            <button class="close-chat" onclick="toggleChat()">&times;</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message bot-message" data-i18n="botWelcome">Hello! Welcome to PixelCraft Studio. Note that 50% advance payment is required for website booking. How can I help you?</div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" data-i18n-placeholder="botPlaceholder" placeholder="Ask anything..." onkeypress="handleKey(event)">
+            <button onclick="sendMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PixelCraft Studio. <span data-i18n="footerText">All rights reserved. Built with precision.</span></p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
